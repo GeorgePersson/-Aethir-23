@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -22,6 +23,29 @@ public class SimpleShoot : MonoBehaviour
 
     public AudioSource source;
     public AudioClip fireSound;
+    public AudioClip reload;
+    public AudioClip noAmmo;
+    public Magazine Magazine;
+    public XRBaseInteractor socketInteractor;
+    private bool hasSlide = true;
+
+    public void Slide()
+    {
+        hasSlide = true;
+        source.PlayOneShot(reload);
+    }
+
+    public void AddMagazine(XRBaseInteractable interactable)
+    {
+        Magazine = interactable.GetComponent<Magazine>();
+        source.PlayOneShot(reload);
+        hasSlide = false;
+    }
+
+    public void RemoveMagazine(XRBaseInteractable interactable)
+    {
+        source.PlayOneShot(reload);
+    }
 
     void Start()
     {
@@ -30,16 +54,28 @@ public class SimpleShoot : MonoBehaviour
 
         if (gunAnimator == null)
             gunAnimator = GetComponentInChildren<Animator>();
+
+        socketInteractor.onSelectEntered.AddListener(AddMagazine);
+        socketInteractor.onSelectEntered.AddListener(RemoveMagazine);
     }
 
   public void PullTheTrigger()
     {
-        gunAnimator.SetTrigger("Fire");
+        if (Magazine && Magazine.numberOfBullet > 0 && hasSlide)
+        {
+
+            gunAnimator.SetTrigger("Fire");
+        } 
+        else
+        {
+            source.PlayOneShot(noAmmo);
+        }
     }
 
     //This function creates the bullet behavior
     void Shoot()
     {
+        Magazine.numberOfBullet--;
         source.PlayOneShot(fireSound);
 
         if (muzzleFlashPrefab)

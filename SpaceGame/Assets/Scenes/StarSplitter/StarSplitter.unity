@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.00034397625, g: 0.00032588778, b: 0.00035305807,
-    a: 1}
+  m_IndirectSpecularColor: {r: 0.0003428377, g: 0.00033293097, b: 0.00035406512, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -492,6 +491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702879254813772857, guid: a8f2bd9d7969dd7479ab73f2f7b2bc9b,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 1073741824
       objectReference: {fileID: 0}
     - target: {fileID: 1702879254813772859, guid: a8f2bd9d7969dd7479ab73f2f7b2bc9b,
         type: 3}
@@ -1452,6 +1456,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0d0c7aeaece3a46a9ac0970d8c4f870f, type: 2}
+    - target: {fileID: 4312496270973364018, guid: a2d2bf1c2768247708d190216a08c8da,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 1073741824
+      objectReference: {fileID: 0}
     - target: {fileID: 4312496270973364022, guid: a2d2bf1c2768247708d190216a08c8da,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2131,7 +2140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512090222}
   m_LocalRotation: {x: -0, y: 0.73309886, z: -0, w: 0.68012214}
-  m_LocalPosition: {x: 5.91, y: 1.34, z: -7.59}
+  m_LocalPosition: {x: 5.91, y: 1.92, z: -7.59}
   m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.5000001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4901,7 +4910,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 2147483648
+    m_Bits: 1073741824
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}

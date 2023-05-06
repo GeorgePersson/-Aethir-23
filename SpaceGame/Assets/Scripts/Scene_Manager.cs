@@ -5,8 +5,9 @@ public class Scene_Manager : MonoBehaviour
 {
    public string Mercury;
    public string Venus;
-   public string Mars;
    public string Earth;
+   public string Moon;
+   public string Mars;
 
     public void LoadMercury()
     {
@@ -21,6 +22,11 @@ public class Scene_Manager : MonoBehaviour
     public void LoadEarth()
     {
         SceneManager.LoadScene(Earth);
+    }
+
+    public void LoadMoon()
+    {
+        SceneManager.LoadScene(Moon);
     }
 
     public void LoadMars()

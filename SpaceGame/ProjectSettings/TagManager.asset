@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Magazine
+  - TrackingObject
+  - Actors
+  - Backpack
+  - Door
   layers:
   - Default
   - TransparentFX

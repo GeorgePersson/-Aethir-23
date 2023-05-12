@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StarSplitter/StarSplitter.unity
+    path: Assets/General/Scenes/StarSplitter/StarSplitter.unity
     guid: 26c8e152896dc9648a7c97122d1f258c
   - enabled: 1
-    path: Assets/Scenes/StarSplitter/Mercury.unity
+    path: Assets/General/Scenes/StarSplitter/Mercury.unity
     guid: 1f000d73d55f04f21a3fa89b7c898523
   - enabled: 1
-    path: Assets/Scenes/StarSplitter/Venus.unity
+    path: Assets/General/Scenes/StarSplitter/Venus.unity
     guid: 96601dfbb8b18ae4e90c3162ccde82a3
   - enabled: 1
-    path: Assets/Scenes/StarSplitter/Moon.unity
+    path: Assets/General/Scenes/StarSplitter/Moon.unity
     guid: 28d90b1186d0abd418fbf9531453ed6f
   - enabled: 1
-    path: Assets/Scenes/StarSplitter/Mars.unity
+    path: Assets/General/Scenes/StarSplitter/Mars.unity
     guid: 00e7b27fdd9868743a53ba98893d7d7c
   - enabled: 1
-    path: Assets/Scenes/StarSplitter/Earth.unity
+    path: Assets/General/Scenes/StarSplitter/Earth.unity
     guid: e03eeef290c180747837f697f326806d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
